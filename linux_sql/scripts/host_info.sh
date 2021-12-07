@@ -16,12 +16,14 @@ fi
 hostname=$(hostname -f)
 
 cpu_number=$(lscpu | egrep "^CPU\(s\):" |  awk '{print $2}'| xargs)
-cpu_architecture=$(lscpu | egrep "Architecture:" | awk '{print $2}'| xargs) 
+cpu_architecture=$(lscpu | egrep "Architecture:" | awk '{print $2}'| xargs)
 cpu_model=$(lscpu | egrep "^Model name:" | awk '{$1=$2""; print $0}' | xargs)
 cpu_mhz=$(lscpu | egrep "CPU MHz:" | awk '{print $3}' | xargs)
 l2_cache=$(lscpu | egrep "^L2" | awk '{print $3}' | xargs)
 total_mem=$(grep MemTotal /proc/meminfo | awk '{print $2}')
 timestamp=$(vmstat -t | awk '{print $18" "$19}')
+
+host_id="(SELECT id FROM host_info WHERE hostname='$hostname')";
 
 l2_cache=$(echo "$l2_cache" | sed 's/[A-Za-z]*//g')
 timestamp=$(echo "$timestamp" | sed 's/[A-Za-z]*//g')
@@ -33,3 +35,5 @@ insert_stmt="INSERT INTO host_info (hostname, cpu_number, cpu_architecture,
 
 psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
 exit $?
+                
+

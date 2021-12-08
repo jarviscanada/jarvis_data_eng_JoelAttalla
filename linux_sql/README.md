@@ -10,11 +10,12 @@ curated to centralize data across numerous of cluster nodes. Technologies used t
 scripts, enabling various of commands to obtain, process, and store data, 
 
 ##*Quick Start*
-psql_docker.sh
-ddl.sql
-host_info.sh
-host_usage.sh
-
+```
+psql_docker.sh - docker container start jrvs-psql
+ddl.sql - 
+host_info.sh - 
+host_usage.sh - 
+```
 ##*Implementation*
 The project implementation process began with fully understanding the overall design 
 and architecture, and identify the purpose of each file being created throughout the 
@@ -31,7 +32,11 @@ may arise throughout the deployment process.
 ###Architecture
 
 ###Scripts
-
+psql_docker.sh <br />
+host_info.sh <br />
+host_usage.sh <br />
+crontab <br />
+queries.sql <br />
 ###Database Modeling
 
 ##*Test*

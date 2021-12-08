@@ -15,7 +15,7 @@ case $cmd in
   if [ $container_status -eq 0 ]; then
 		echo 'Container already exists'
 		exit 1	
-	fi
+  fi
 
   if [ $# -ne 3 ]; then
     echo 'Create requires username and password'

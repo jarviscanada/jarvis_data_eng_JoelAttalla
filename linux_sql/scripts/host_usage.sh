@@ -6,10 +6,6 @@ db_name=$3
 psql_user=$4
 psql_password=$5
 
-if [ $# -ne 5 ]; then
-  echo "Number of arguements invalid, 5 arguements (host, port, database name, user and password fields)
-required to continue."
-
 if [ $# -ne  5 ]; then
   echo "  Number of arguements invalid."
   echo "  5 arguements (host, port, database name,
@@ -27,10 +23,10 @@ disk_io=$(vmstat -d | awk '{print $10}' | tail -1 | xargs)
 disk_available=$(df -BM / | awk '{print $4}' | tail -1 | xargs)
 timestamp=$(vmstat -t | awk '{print $18" "$19}')
 
+host_id="(SELECT id FROM host_info WHERE hostname='$hostname')";
+
 disk_available=$(echo "$disk_available" | sed 's/[A-Za-z]*//g')
 timestamp=$(echo "$timestamp" | sed 's/[A-Za-z]*//g')
-
-host_id="(SELECT id FROM host_info WHERE hostname='$hostname')";
 
 insert_stmt="INSERT INTO host_usage (timestamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available) VALUES('$timestamp', '$host_id','$memory_free','$cpu_idle','$cpu_kernel','$disk_io','$disk_available');"
 

@@ -19,15 +19,14 @@ UNIQUE(hostname)
 CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
 
 ( 
-    "timestamp"    TIMESTAMP NOT NULL, 
-     host_id        SERIAL NOT NULL,
-     memory_free    INT NOT NULL,
-     cpu_idle       INT NOT NULL,
-     cpu_kernel     INT NOT NULL, 
-     disk_io        INT NOT NULL,
-     disk_available VARCHAR NOT NULL,
-
-FOREIGN KEY(host_id)
-REFERENCES host_info(id) 
+    "timestamp"     TIMESTAMP NOT NULL,
+    host_id         INT NOT NULL,
+    memory_free     INT NOT NULL,
+    cpu_idle        INT NOT NULL,
+    cpu_kernel      INT NOT NULL,
+    disk_io         INT NOT NULL,
+    disk_available  INT NOT NULL,
+   
+FOREIGN KEY(host_id) REFERENCES host_info(id)
 
 );

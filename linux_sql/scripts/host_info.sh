@@ -33,7 +33,12 @@ insert_stmt="INSERT INTO host_info (hostname, cpu_number, cpu_architecture,
  $cpu_number, '$cpu_architecture', '$cpu_model', $cpu_mhz, $l2_cache,
  $total_mem, '$timestamp');"
 
+export PGPASSWORD=$psql_password 
+
 psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
 exit $?
+<<<<<<< HEAD
                 
 
+=======
+>>>>>>> 5bd1ab3359140a74a61b51cf65e1012a7f4cd0ad

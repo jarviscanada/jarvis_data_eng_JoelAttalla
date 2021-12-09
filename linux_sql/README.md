@@ -2,12 +2,14 @@
 ##*Introduction*
 The sole purpose of the Linux Cluster Monitoring Agent is to provide users the capabilities to store and analyze 
 system metrics in order to monitor system performance in an effective manner.
-Through having hardware specifications and resource usage data processed using various bash scripts to obtain
-required data and store the data into established databases,
-this provides user the ability to access this essential data efficiently, to be able
+Through having hardware specifications and resource usage data processed and updated using various bash scripts to obtain
+required data from each distinct node, and store the data into established database found in the main node,
+this provides the user the ability to access this essential data efficiently, to be able
 to address any issues directly. All gathered data is stored within a PostgreSQL database
-curated to centralize data across numerous of cluster nodes. Technologies used throughout this process include, bash
-scripts, enabling various of commands to obtain, process, and store data, 
+curated to centralize data across numerous of cluster nodes. 
+
+Technologies and software used throughout this process include: Google Cloud Platform, Git, VNC Server/Viewer, Linux CentOS 7, 
+PostgreSQL, Docker, IntelliJ IDEA v2021.2.3, Bash Scripts, Crontab, and SQL Queries.
 
 ##*Quick Start*
 ```

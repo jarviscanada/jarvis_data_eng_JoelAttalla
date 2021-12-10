@@ -1,6 +1,6 @@
 #Linux Cluster Monitoring Agent
 
-##*Introduction*
+##*Introduction* 
 The sole purpose of the Linux Cluster Monitoring Agent is to provide users the capabilities to store and analyze 
 system metrics in order to monitor system performance in an effective manner.
 Through having hardware specifications and resource usage data processed and updated using various bash scripts to obtain
@@ -35,7 +35,7 @@ crontab -e
 * * * * * bash /home/centos/dev/jarvis_data_eng_JoelAttalla/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password &> /tmp/host_usage.log
 ```
 
-##*Implementation*
+##*Implementation* 
 The project implementation process began with fully understanding the overall design 
 and architecture, and identify the purpose of each file being created throughout the 
 file directory. By understanding the purpose of each and every process throughout the 
@@ -50,7 +50,7 @@ we have incorporated compiled SQL Queries to organize data clusters and combat a
 may arise throughout the deployment process. We will discuss the architecture design, description
 and usage of each shell script, and the database modeling.
 
-###Architecture
+###Architecture 
 Shown through the diagram below, you can see a Linux cluster consisting of three Linux nodes defined
 within the virtual machine interphase, consisting of bash script that is executed to collect and process
 hardware info and usage. This data is then transmitted through an internal switch to the primary linux node 
@@ -61,7 +61,7 @@ minute by minute basis.
 
 ![Linux_SQL_Architecture](assets/Linux_SQL_Architecture.jpeg)
 
-###Scripts
+###Scripts 
 Below we will discuss each provisioned script each created to execute specific tasks that are essential in 
 collecting the data we are seeking to analyze and store.
 

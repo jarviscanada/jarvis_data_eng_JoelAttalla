@@ -13,12 +13,12 @@ case $cmd in
   create)
 
   if [ $container_status -eq 0 ]; then
-		echo 'Container already exists'
+		echo 'Container already exists.'
 		exit 1	
   fi
 
   if [ $# -ne 3 ]; then
-    echo 'Create requires username and password'
+    echo 'Create requires username and password.'
     exit 1
   fi
 	docker volume create pgdata

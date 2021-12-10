@@ -58,14 +58,58 @@ consisting of a provisioned Postgres database. Data collected from the *host_inf
 server host hardware specifications, and store them in the host_info table in the database once, whereas the 
 *host_usage.sh* script will attain the server host usage data, and store them in the host_usage table on a 
 minute by minute basis.
+
 ![Linux_SQL_Architecture](assets/Linux_SQL_Architecture.jpeg)
 
 ###Scripts
-psql_docker.sh <br />
-host_info.sh <br />
-host_usage.sh <br />
-crontab <br />
-queries.sql <br />
+Below we will discuss each provisioned script each created to execute specific tasks that are essential in 
+collecting the data we are seeking to analyze and store.
+
+####psql_docker.sh
+
+- Description <br />
+This script will provide the ability to create a PSQL container, as well as start and stop
+the created container. The script must pass through implemented parameters prior to creating 
+the container, to ensure only one container is created.
+
+- Usage <br />
+
+```
+./scripts/psql_docker.sh create "postgres" "password"
+```
+
+```
+./scripts/psql_docker.sh start
+```
+
+```
+./scripts/psql_docker.sh stop
+```
+
+####host_info.sh
+
+- Description <br />
+
+- Usage <br />
+
+####host_usage.sh <br />
+
+- Description <br />
+
+- Usage <br />
+
+####crontab <br />
+
+- Description <br />
+
+- Usage <br />
+
+####queries.sql <br />
+
+- Description <br />
+
+- Usage <br />
+
 ###Database Modeling
 
 ##*Test*

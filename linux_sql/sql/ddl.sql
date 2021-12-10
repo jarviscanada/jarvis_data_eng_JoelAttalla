@@ -1,5 +1,4 @@
 CREATE TABLE IF NOT EXISTS PUBLIC.host_info
-
 (
      id               SERIAL NOT NULL, 
      hostname         VARCHAR NOT NULL, 
@@ -15,7 +14,6 @@ UNIQUE(hostname)
 );
 
 CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
-
 ( 
      "timestamp"      TIMESTAMP NOT NULL,
      host_id          INT NOT NULL,

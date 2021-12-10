@@ -20,8 +20,6 @@ memory_free=$(echo "$vmstat_mb" | awk '{print $4}' | tail -n1 | xargs)
 cpu_idle=$(echo "$vmstat_mb" | awk '{print $15}' | tail -n1 | xargs) 
 cpu_kernel=$(echo "$vmstat_mb" | awk '{print $13}' | tail -n1 | xargs)
 disk_io=$(vmstat -d | awk '{print $10}' | tail -n1 | xargs)
-
-
 disk_available=$(echo "$disk_available" | sed 's/[A-Za-z]*//g')
 timestamp=$(echo "$timestamp" | sed 's/[A-Za-z]*//g')
 

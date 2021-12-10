@@ -13,12 +13,28 @@ Technologies and software used throughout this process include: Google Cloud Pla
 PostgreSQL, Docker, IntelliJ IDEA v2021.2.3, Bash Scripts, Crontab, and SQL Queries.
 
 ##*Quick Start*
+- Start a PSQL instance using psql_docker.sh.
 ```
-psql_docker.sh - docker container start jrvs-psql
-ddl.sql - 
-host_info.sh - 
-host_usage.sh - 
+./scripts/psql_docker.sh start
 ```
+- Create tables using ddl.sql.
+```
+psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
+```
+- Insert hardware specs data into the DB using host_info.sh.
+```
+./scripts/host_info.sh psql_port db_name psql_user psql_password
+```
+- Insert hardware usage data into the DB using host_usage.sh.
+```
+./scripts/host_usage.sh psql_port db_name psql_user psql_password
+```
+- Crontab setup.
+```
+crontab -e
+* * * * * bash /home/centos/dev/jarvis_data_eng_JoelAttalla/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password &> /tmp/host_usage.log
+```
+
 ##*Implementation*
 The project implementation process began with fully understanding the overall design 
 and architecture, and identify the purpose of each file being created throughout the 
@@ -31,7 +47,7 @@ writing bash scripts to create containers, collect and process system performanc
 store the collected data in assigned databases, implement monitoring programs to
 continuously collect resource data usage and hardware specifications across servers. Lastly,
 we have incorporated compiled SQL Queries to organize data clusters and combat any errors that
-may arise throughout the deployment process.
+may arise throughout the deployment process. We will discuss the 
 ###Architecture
 
 ###Scripts

@@ -47,8 +47,18 @@ writing bash scripts to create containers, collect and process system performanc
 store the collected data in assigned databases, implement monitoring programs to
 continuously collect resource data usage and hardware specifications across servers. Lastly,
 we have incorporated compiled SQL Queries to organize data clusters and combat any errors that
-may arise throughout the deployment process. We will discuss the 
+may arise throughout the deployment process. We will discuss the architecture design, description
+and usage of each shell script, and the database modeling.
+
 ###Architecture
+Shown through the diagram below, you can see a Linux cluster consisting of three Linux nodes defined
+within the virtual machine interphase, consisting of bash script that is executed to collect and process
+hardware info and usage. This data is then transmitted through an internal switch to the primary linux node 
+consisting of a provisioned Postgres database. Data collected from the *host_info.sh* script will attain the
+server host hardware specifications, and store them in the host_info table in the database once, whereas the 
+*host_usage.sh* script will attain the server host usage data, and store them in the host_usage table on a 
+minute by minute basis.
+![Linux_SQL_Architecture](assets/Linux_SQL_Architecture.jpeg)
 
 ###Scripts
 psql_docker.sh <br />

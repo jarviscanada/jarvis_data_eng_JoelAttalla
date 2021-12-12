@@ -118,7 +118,7 @@ Modeling section.
 The script below will gather the extracted usage information, process the data, and store the data in the assigned table in the 
 database. The *psql_host* section consists of the host name. The *psql_port* section consists of the port number for the
 server instance. The *db_name* section consists of the name of the database. The *psql_user* section consists of the instance username selected.
-The *psql_password consists of the instance password selected.
+The *psql_password* consists of the instance password selected.
 ```
 ./scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password
 ./scripts/host_usage.sh "localhost" 5432 "host_agent" "postgres" "password"
@@ -148,6 +148,32 @@ psql -h localhost -U postgres -d host_agent -f queries.sql
 ```
 ****
 ###Database Modeling
+Presented below is a model of the provisioned table within the host_agent database, consisting of the extracted data collected
+from the *host_info.sh* and *host_usage.sh* scripts.
+
+####host_info Table
+Variable | Data Type | Description
+--------------|------|--------------
+id | `SERIAL` | Primary Key; created automatically when entered into the database. 
+hostname | `VARCHAR` | Server name holder.
+cpu_number | `INT` | Number of CPUs listed in server.
+cpu_architecture | `VARCHAR` | Holds CPU architecture specifications.
+cpu_model | `VARCHAR` | CPU model holder.
+cpu_mhz | `REAL` | CPU MHz holder.
+L2_cache | `INT` | Holds L2 cache amount (KB).
+total_mem | `INT` | Holds total amount of memory (KB).
+timestamp | `TIMESTAMP` | Timestamp, formatted in UTC timezone.
+
+####host_usage Table
+Variable | Data Type | Description
+--------------|------|--------------
+timestamp | `TIMESTAMP` | Timestamp, formatted in UTC timezone.
+host_id | `INT` | Foreign Key; holds ID of the host.
+memory_free | `INT` | Displays free memory (MB).
+cpu_idle | `INT` | Displays percentage of idle CPU time.
+cpu_kernel | ` INT ` | Displays percentage of CPU usage.
+disk_io | `INT` | Carries amount of I/O that is being used.
+disk_available | `INT` | Confirms amount of available disk space in CPU.
 ****
 ##*Test*
 ****

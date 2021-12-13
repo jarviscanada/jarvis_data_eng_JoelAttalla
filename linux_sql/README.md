@@ -1,6 +1,6 @@
-#Linux Cluster Monitoring Agent
+# Linux Cluster Monitoring Agent
 ****
-##*Introduction* 
+## *Introduction* 
 The sole purpose of the Linux Cluster Monitoring Agent is to provide users with the capabilities to store and analyze 
 system metrics, in order to monitor system performance in an effective manner.
 Through having hardware specifications and resource usage data processed and updated (using various bash scripts to obtain
@@ -11,7 +11,7 @@ is stored within a PostgreSQL database, curated to centralize data across numero
 Technologies and softwares used throughout this process include: Google Cloud Platform, Git, VNC Server/Viewer, Linux CentOS 7, 
 PostgreSQL, Docker, IntelliJ IDEA v2021.2.3, Bash Scripts, Crontab, and SQL Queries.
 ****
-##*Quick Start*
+## *Quick Start*
 - Start a PSQL instance using psql_docker.sh.
 ```
 ./scripts/psql_docker.sh start
@@ -34,7 +34,7 @@ crontab -e
 * * * * * bash /home/centos/dev/jarvis_data_eng_JoelAttalla/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password &> /tmp/host_usage.log
 ```
 ****
-##*Implementation* 
+## *Implementation* 
 The project implementation process began with fully understanding the overall design 
 and architecture and identifying the purpose of each file being created throughout the 
 file directory. By understanding the purpose of each and every process throughout the 
@@ -60,12 +60,12 @@ server host hardware specifications and store them in the host_info table in the
 *host_usage.sh* script will attain the server host usage data and store them in the host_usage table on a 
 minute by minute basis.
 
-![Linux_SQL_Architecture](assets/Linux_SQL_Architecture.jpeg)
+![Linux_SQL_Architecture](assets/Linux_SQL_Architecture.jpg)
 ****
-###Scripts 
+### Scripts 
 Below we will discuss each provisioned script created to execute specific tasks that were essential to collecting the data we are seeking to analyze and store.
 
-####psql_docker.sh
+#### psql_docker.sh
 
 - Description <br />
 This script will provide the user with the ability to create a PSQL container, as well as start and stop
@@ -88,8 +88,7 @@ The scripts below will stop the container when executed.
 ./scripts/psql_docker.sh stop
 ```
 
-####host_info.sh
-
+#### host_info.sh
 - Description <br />
 This scripts will provide the user with the ability to extract hardware specifications for the particular server (using various Linux
 usage data commands), transfer the extracted data to the Postgres database, and store the data in the host_info table.
@@ -106,7 +105,7 @@ The *psql_password consists of the instance password selected.
 ./scripts/host_info.sh "localhost" 5432 "host_agent" "postgres" "password"
 ```
 
-####host_usage.sh <br />
+#### host_usage.sh <br />
 
 - Description <br />
 This script will provide the user with the ability to extract usage information, process and store the data in the assigned table in the database.
@@ -123,7 +122,7 @@ The *psql_password* consists of the instance password selected.
 ./scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password
 ./scripts/host_usage.sh "localhost" 5432 "host_agent" "postgres" "password"
 ```
-####crontab <br />
+#### crontab <br />
 
 - Description <br />
 This script will provide the user with the ability to execute the *host_usage.sh* scripts on a minute by minute basis. Following the
@@ -134,7 +133,7 @@ The script below will configure the crontab script to ensure the *host_usage.sh*
 ```
 * * * * * bash /home/centos/dev/jarvis_data_eng_JoelAttalla/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password &> /tmp/host_usage.log
 ```
-####queries.sql <br />
+#### queries.sql <br />
 
 - Description <br />
 This script consists of SQL queries which will provide the user with the ability to group hosts pertaining to their CPU numbers, and sort their memory sizes in descending order.
@@ -147,13 +146,13 @@ The script below will execute the SQL queries.
 psql -h localhost -U postgres -d host_agent -f queries.sql
 ```
 ****
-###Database Modeling
+### Database Modeling
 Presented below is a model of the provisioned tables within the host_agent database, consisting of the extracted data collected
 from the *host_info.sh* and *host_usage.sh* scripts. The *host_info.sh* script is executed once and stores the hardware specification
 data in the variables presented in the host_info table, whereas the variables in the host_usage table are updated every minute, as the 
 *host_usage* script will run and update minute by minute.
 
-####host_info Table
+#### host_info Table
 Variable | Data Type | Description
 -----------|------|-----------
 id | `SERIAL` | Primary Key; created automatically when entered into the database. 
@@ -166,7 +165,7 @@ L2_cache | `INT` | Holds L2 cache amount (KB).
 total_mem | `INT` | Holds total amount of memory (KB).
 timestamp | `TIMESTAMP` | Timestamp, formatted in UTC timezone.
 
-####host_usage Table
+#### host_usage Table
 Variable | Data Type | Description
 -----------|------|-----------
 timestamp | `TIMESTAMP` | Timestamp, formatted in UTC timezone.
@@ -177,7 +176,7 @@ cpu_kernel | ` INT ` | Displays percentage of CPU usage.
 disk_io | `INT` | Carries amount of I/O that is being used.
 disk_available | `INT` | Confirms amount of available disk space in CPU.
 ****
-##*Test*
+## *Test*
 Following the completion of all scripts required to process and store the data, we began the
 testing phase to ensure the data was being retrieved, processed, and stored properly with no issues.
 Each script was executed using their assigned commands to process the data in alliance with the Postgres
@@ -185,13 +184,13 @@ database to ensure all scripts were transmitting retrieved data into the databas
 Once all the bash scripts completed their tests, the SQL queries were then executed and tested to ensure the 
 queries generated the adequate output (ensuring clusters were able to be managed more effectively).
 ****
-##*Deployment*
+## *Deployment*
 Following the testing phase, all provisioned scripts were added, committed, and pushed (deployed)
 to the jarvis_data_eng_JoelAttalla/linux_sql directory in the Github repository for review. Once a
 review has been completed to ensure functionality, any remaining adjustments required to be made will
 be adjusted immediately, in which the project will be deemed complete.
 ****
-##*Improvements*
+## *Improvements*
 - Unlike the *host_usage.sh* script, which will continuously update the host_usage table with the immediate usage
 data on a minute by minute basis, the *host_info.sh* currently only collects the hardware specification data once. 
 This results in any alterations or updates to the hardware specifications to not be updated within the host_info

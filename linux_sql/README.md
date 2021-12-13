@@ -51,7 +51,7 @@ may have arisen throughout the deployment process.
 In this section, we will discuss the architecture design, description
 and usage of each shell script, and database modeling.
 ****
-###Architecture 
+### Architecture 
 Shown through the diagram below, you can see a Linux cluster comprising of three Linux nodes defined
 within the virtual machine interphase. This consists of bash script that was executed to collect and process
 hardware information and usage. This data was then transmitted through an internal switch to the primary linux node 
@@ -64,14 +64,11 @@ minute by minute basis.
 ****
 ### Scripts 
 Below we will discuss each provisioned script created to execute specific tasks that were essential to collecting the data we are seeking to analyze and store.
-
 #### psql_docker.sh
-
 - Description <br />
 This script will provide the user with the ability to create a PSQL container, as well as start and stop
 the created container. The script must pass through implemented parameters prior to creating 
 the container to ensure only one container is created.
-
 - Usage <br />
 The script below will create the docker container which consists of the Postgres database we will be using throughout the project if executed. 
 The *db_username* section will be the username selected for the database, and the *db_password* section will be the password selected for the database 
@@ -106,7 +103,6 @@ The *psql_password consists of the instance password selected.
 ```
 
 #### host_usage.sh <br />
-
 - Description <br />
 This script will provide the user with the ability to extract usage information, process and store the data in the assigned table in the database.
 In comparison to the *host_info.sh* script, the *host_usage.sh* script will execute, extract immediate data, and store the data on a minute by
@@ -123,7 +119,6 @@ The *psql_password* consists of the instance password selected.
 ./scripts/host_usage.sh "localhost" 5432 "host_agent" "postgres" "password"
 ```
 #### crontab <br />
-
 - Description <br />
 This script will provide the user with the ability to execute the *host_usage.sh* scripts on a minute by minute basis. Following the
 configuration of the crontab, the script will begin to extract *host_usage.sh* data every minute, collect the data, and
@@ -134,7 +129,6 @@ The script below will configure the crontab script to ensure the *host_usage.sh*
 * * * * * bash /home/centos/dev/jarvis_data_eng_JoelAttalla/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password &> /tmp/host_usage.log
 ```
 #### queries.sql <br />
-
 - Description <br />
 This script consists of SQL queries which will provide the user with the ability to group hosts pertaining to their CPU numbers, and sort their memory sizes in descending order.
 The script also will then execute the next query which will display the average memory used over a five minute timespan.

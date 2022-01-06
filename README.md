@@ -1,6 +1,10 @@
 # Joel Attalla . Jarvis Consulting
 
+<<<<<<< HEAD
 Recent BComm graduate with a major in Business Technology Management (BTM) and a minor in Economics from Ryerson University. My major integrated ICT-centered restructuring of core business principles, fostering a more innovative approach to these business strategies and, in turn, capitalizing on them. This involved a comprehensive study of core business disciplines and programming languages, such as SQL, Python, Javascript, R, and HTML. The four-year program concluded with a final project where I conducted a business case-study consisting of numerous business issues that the company wishes to resolve using ICT and business solutions. Over the year-long project, I was required to develop and apply various IS solutions, diagrams, and models. My team and I used database, programming, security, and system designs to provide the client with the desired IS solutions. My economics minor provided me with insight on quantitative economic analysis to implement for successful management decision making. With the background gained through my degree, coupled with the experience I have acquired with Jarvis Consulting, I anticipate learning more about various data engineering programs and techniques to expand my skills further and successfully secure a position as a Business Analyst/Business Systems Analyst/Data Analyst(BA/BSA/DA).
+=======
+Recent BComm graduate with a major in Business Technology Management (BTM) and a minor in Economics from Ryerson University. My major integrated ICT-centered restructuring of core business principles, fostering a more innovative approach to these business strategies and, in turn, capitalizing on them. This involved a comprehensive study of core business disciplines and programming languages, such as SQL, Python, Javascript, R, and HTML. The four-year program concluded with a final project where I conducted a business case-study consisting of numerous business issues that the company wishes to resolve using ICT and business solutions. Over the year-long project, I was required to develop and apply various IS solutions, diagrams, and models. My team and I used database, programming, security, and system designs to provide the client with the desired IS solutions. My economics minor provided me with insight on quantitative economic analysis to implement for successful management decision making. With the background gained through my degree, coupled with the experience I have acquired with Jarvis Consulting, I anticipate learning more about various data engineering programs and techniques to expand my skills further and successfully secure a position as a Business Analyst/Business Systems Analyst/Data Analyst (BA/BSA/DA).
+>>>>>>> feature/Profile
 
 ## Skills
 
@@ -15,9 +19,15 @@ Recent BComm graduate with a major in Business Technology Management (BTM) and a
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla)
 
 
+<<<<<<< HEAD
 **Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master/linux_sql)]: Developed a monitoring system with integrated bash scripts and SQL queries to extract, store, and analyze data and it's processes across cluster nodes into a provisioned Postgres database.
 
 **Python Data Analytics [Github(in progress)]** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master)]: Began the learning process for the development of a proof of concept (PoC) system to analyze customer shopping behavior, to provide data analytics to enhance a company?s marketing strategies and decision making. 
+=======
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master/linux_sql)]: Developed a monitoring system with integrated bash scripts and SQL queries to extract, store, and analyze data and it's processes across cluster nodes into a provisioned Postgres database.
+
+**Python Data Analytics [In Progress]** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master)]: Began the learning process for the development of a proof of concept (PoC) system to analyze customer shopping behavior, to provide data analytics to enhance a company's marketing strategies and decision making. 
+>>>>>>> feature/Profile
 
 
 ## Highlighted Projects

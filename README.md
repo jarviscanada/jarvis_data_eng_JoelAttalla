@@ -15,9 +15,9 @@ Recent BComm graduate with a major in Business Technology Management (BTM) and a
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master/linux_sql)]: Developed a monitoring system with integrated bash scripts and SQL queries to extract, store, and analyze data and it's processes across cluster nodes into a provisioned Postgres database.
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master/linux_sql)]: Developed a monitoring system with integrated bash scripts and SQL queries to extract, store, and analyze data and it's processes across cluster nodes into a provisioned Postgres database.
 
-**Python Data Analytics [Github(in progress)]** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master)]: Began the learning process for the development of a proof of concept (PoC) system to analyze customer shopping behavior, to provide data analytics to enhance a company's marketing strategies and decision making. 
+**Python Data Analytics [In Progress]** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master)]: Began the learning process for the development of a proof of concept (PoC) system to analyze customer shopping behavior, to provide data analytics to enhance a company's marketing strategies and decision making. 
 
 
 ## Highlighted Projects

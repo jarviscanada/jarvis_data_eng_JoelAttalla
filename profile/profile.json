@@ -20,13 +20,13 @@
   "jarvis_projects": [
     {
       "description": "Developed a monitoring system with integrated bash scripts and SQL queries to extract, store, and analyze data and it's processes across cluster nodes into a provisioned Postgres database.",
-      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master/linux_sql",
+      "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
     {
       "description": "Began the learning process for the development of a proof of concept (PoC) system to analyze customer shopping behavior, to provide data analytics to enhance a company's marketing strategies and decision making. ",
       "git_url": "",
-      "name": "Python Data Analytics [Github(in progress)]"
+      "name": "Python Data Analytics [In Progress]"
     }
   ],
   "name": "Joel Attalla",

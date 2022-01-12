@@ -11,7 +11,7 @@ SELECT COUNT(*) FROM retail;
 SELECT COUNT(DISTINCT customer_id) FROM retail;
 
 -- Invoice Data Range. (eg. Max/Min Dates)
-SELECT MAX(invoice_date),MIN(invoice_date) FROM retail;
+SELECT MAX(invoice_date), MIN(invoice_date) FROM retail;
 
 -- Number of SKU/Merchants. (eg. Unique Stock Code)
 SELECT COUNT(DISTINCT stock_code) FROM retail;
@@ -27,3 +27,14 @@ FROM (
      HAVING SUM(quantity * unit_price) > 0
      )
 AS total_invoice_amount;
+
+-- Calculate Total Revenue.
+SELECT SUM(unit_price * quantity) FROM retail;
+
+-- Calculate Total Revenue by YYYYMM.
+SELECT to_char(invoice_date, 'yyyymm')
+AS yyyymm
+SUM(quantity * unit_price)
+FROM retail
+GROUP BY yyyymm
+ORDER BY yyyymm ASC;

@@ -5,28 +5,27 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_JoelAttall
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: Recent BComm graduate with a major in Business Technology Management (BTM) and a minor in Economics from Ryerson University. My major integrated ICT-centered restructuring of core business principles, fostering a more innovative approach to these business strategies and, in turn, capitalizing on them. This involved a comprehensive study of core business disciplines and programming languages, such as SQL, Python, Javascript, R, and HTML. The four-year program concluded with a final project where I conducted a business case-study consisting of numerous business issues that the company wishes to resolve using ICT and business solutions. Over the year-long project, I was required to develop and apply various IS solutions, diagrams, and models. My team and I used database, programming, security, and system designs to provide the client with the desired IS solutions. My economics minor provided me with insight on quantitative economic analysis to implement for successful management decision making. With the background gained through my degree, coupled with the experience I have acquired with Jarvis Consulting, I anticipate learning more about various data engineering programs and techniques to expand my skills further and successfully secure a position as a Business Analyst/Business Systems Analyst/Data Analyst (BA/BSA/DA).
+summary: Recent BComm graduate with a major in Business Technology Management (BTM) and a minor in Economics from Ryerson University. My major integrated information and communication technology (ICT)-centered restructuring of core business principles, fostering a more innovative approach to these business strategies and, in turn, capitalizing on them. This involved a comprehensive study of core business disciplines and programming languages, such as SQL, Python, Javascript, R, and HTML. The four-year program concluded with a final project where I conducted a business case-study consisting of numerous business issues that the company wishes to resolve using ICT and business solutions. Over the year-long project, I was required to develop and apply various IS solutions, diagrams, and models. My team and I used database, programming, security, and system designs to provide the client with the desired information systems (IS) solutions. My economics minor provided me with insight on quantitative economic analysis to implement for successful management decision making. With the background gained through my degree, coupled with the experience I have acquired with Jarvis Consulting, I anticipate learning more about various data analytics and software development techniques to expand my skills further and successfully secure a position as a Business Analyst/Business Systems Analyst/Data Analyst (BA/BSA/DA).
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
 skills:
   # At least 5 skills
   proficient:
-    - Data Analysis
-    - RDBMS/SQL
+    - Data Analytics with SQL
+    - Python
+    - R
+    - Excel
+    - HTML/CSS
     - Linux/Bash Script
     - Git
     - Docker
     - Agile/Scrum
-    - Cloud Computing [Google Cloud Platform (GCP)]
-    - R
-    - HTML
-    - MS Office
-    - Excel
+    - Google Cloud
   # At least 5 skills
   competent:
     - Python
-    - Javascript
+    - Javascript (Aperture, D3.js, CanvasJS)
     - Statistics
     - Finance
     - Accounting
@@ -44,11 +43,11 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Developed a monitoring system with integrated bash scripts and SQL queries to extract, store, and analyze data and it's processes across cluster nodes into a provisioned Postgres database."
+    description: "Grasped core business needs, drafted an arcitecture diagram,  and proposed solutions for the company. Developed a monitoring system with integrated bash scripts and SQL queries to extract, store, and analyze data. The data is then processed across cluster nodes into a provisioned Postgres database."
 
   - name: "Python Data Analytics [In Progress]"
     git_url: " "
-    description: "Began the learning process for the development of a proof of concept (PoC) system to analyze customer shopping behavior, to provide data analytics to enhance a company's marketing strategies and decision making. "
+    description: "Designed and implemented a proof of concept (PoC) system to analyze customer shopping behavior. Customer data was imported into a PSQL data warehouse, and data wrangling/analysis was conducted using Python Dataframe/NumPy and Pandas, through the Jupyter Notebook. Through the implementation of various algorithims and methodolgies, statistical diagrams will be generated/visualized to provide data analytics which, in turn, will enhance a company's marketing strategies and decision making."
 
 # List of personal or academic projects
 # Feel free to add more projects
@@ -56,7 +55,7 @@ highlighted_projects:
     #project name
   - name: "ITM 90A/B Graduation Project"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Developed and applied various IS solutions, diagrams, and models, using database, programming, security, and system designs to provide the client with their desired IS solutions to meet business needs."
+    description: "Developed and applied various information systems (IS) solutions including, but not limited to drafting class diagrams, system sequence diagrams, etc. Designed risk management plans/deployment plans and developed SQL schema database/SQL queries to provide the client with their desired IS solutions to meet business needs."
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
@@ -67,12 +66,12 @@ professional_experience:
     company: "Jarvis Consulting"
     duration: "2021-Present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Learning and implementing various data engineering programs to attain the required experience for success in the workplace. Using Linux/SQL platforms, I have successfully developed a monitoring system with integrated bash scripts and SQL queries. Currently, I have begun the learning process for the development of a proof of concept (PoC) system using Python interphases."
-
+    description: "Learning and implementing various software and data programs to attain the required experience for success in the workplace. Experience is not limited to program development, but also includes communicating with my team in agile meetings and project forums to collaborate and solve technical issues. As a Jarvis software devloper, I am responsible for helping other developers with whichever errors they may come across. Also, I am accountable for keeping senior developers/scrum master updated in regards to project timelines and scheduling meetings."
+ 
   - title: "Rides Supervision Member"
     company: "Canada's Wonderland"
     duration: "2019-Present"
-    description: "Through my position as a rides supervision member at Canada's Wonderland, consistent use of interpersonal skills with both park guests and employees is crucial. I am also responsible for maintaining team relations, done through regulating scheduling and training of all ride attendants and operators. In addition, I also conduct opening and closing procedures at ride locations, oversee the safe operations of the ride group, and resolve guest conflict."
+    description: "Through my position as a rides supervision member at Canada's Wonderland, consistent use of interpersonal skills with both park guests and employees is crucial. I am also responsible for collaborating with my supervision team to regulate scheduling and to train associates. In this leadership position I am responsible for handling guest conflict, where my communication skills are essential in order to defuse any tension. Lastly, I conduct opening and closing procedures at ride locations, and oversee safe operations at the ride group."
 
 #List of edcuation
 education: 
@@ -89,6 +88,6 @@ others:
     #category
   - title: "Miscellaneous"
     bullets:
-      - "Sports (Basketball, Hockey, Soccer)"
-      - "Trading/Investing"
-      - "Running/Hiking"
+      - "Participating in organized sports (basketball)"
+      - "Building investment portfolio (stocks)"
+      - "Organizing running/hiking/skiing events"

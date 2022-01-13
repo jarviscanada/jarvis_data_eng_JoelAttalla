@@ -33,7 +33,7 @@ SELECT SUM(unit_price * quantity) FROM retail;
 
 -- Calculate Total Revenue by YYYYMM.
 SELECT to_char(invoice_date, 'yyyymm')
-AS yyyymm
+AS yyyymm,
 SUM(quantity * unit_price)
 FROM retail
 GROUP BY yyyymm

@@ -3,13 +3,13 @@
 ## *Introduction* 
 The sole purpose of the Linux Cluster Monitoring Agent is to provide users with the capabilities to store and analyze 
 system metrics, in order to monitor system performance in an effective manner.
-Through having hardware specifications and resource usage data processed and updated (using various bash scripts to obtain
+Through having hardware specifications and resource usage data processed and updated (through using data extracting bash scripts to obtain
 required data from each distinct node and store it into established database found in the main node),
 this provides the user with the ability to access this data efficiently in order to address any issues directly. All gathered data 
 is stored within a PostgreSQL database, curated to centralize data across numerous of cluster nodes. 
 
-Technologies and softwares used throughout this process include: Google Cloud Platform, Git, VNC Server/Viewer, Linux CentOS 7, 
-PostgreSQL, Docker, IntelliJ IDEA v2021.2.3, Bash Scripts, Crontab, and SQL Queries.
+Technologies and softwares used throughout this process include: Docker, Git, 
+PostgreSQL, IntelliJ IDEA v2021.2.3, Bash Scripts, Crontab, and SQL Queries.
 ****
 ## *Quick Start*
 - Start a PSQL instance using psql_docker.sh.
@@ -60,7 +60,7 @@ server host hardware specifications and store them in the host_info table in the
 *host_usage.sh* script will attain the server host usage data and store them in the host_usage table on a 
 minute by minute basis.
 
-![Linux_SQL_Architecture](assets/Linux_SQL_Architecture.jpg)
+![Linux_SQL_Architecture2](assets/Linux_SQL_Architecture2.jpg)
 ****
 ### Scripts 
 Below we will discuss each provisioned script created to execute specific tasks that were essential to collecting the data we are seeking to analyze and store.

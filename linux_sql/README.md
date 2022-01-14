@@ -60,7 +60,7 @@ server host hardware specifications and store them in the host_info table in the
 *host_usage.sh* script will attain the server host usage data and store them in the host_usage table on a 
 minute by minute basis.
 
-![Linux_SQL_Architecture2](assets/Linux_SQL_Architecture2.jpg)
+![Linux_SQL_Architecture1](assets/Linux_SQL_Architecture1.jpg)
 ****
 ### Scripts 
 Below we will discuss each provisioned script created to execute specific tasks that were essential to collecting the data we are seeking to analyze and store.

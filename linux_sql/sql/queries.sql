@@ -4,7 +4,7 @@ FROM host_info
 GROUP BY cpu_number, id
 ORDER BY cpu_number, total_mem DESC;
 
--- Round 5 Function - Timestamp Return in 5 Minute Intervals.
+-- Round 5 Function - Timestamp Returns in 5 Minute Intervals.
 CREATE FUNCTION round5(ts timestamp) RETURNS timestamp AS
 $$
 BEGIN

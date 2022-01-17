@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_info
      cpu_mhz          REAL NOT NULL,
      L2_cache         INT NOT NULL,
      total_mem        INT NOT NULL,
-     timestamp        TIMESTAMP NOT NULL,
+     timestamp        TIMESTAMP NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
@@ -19,5 +19,5 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
      cpu_idle         INT NOT NULL,
      cpu_kernel       INT NOT NULL,
      disk_io          INT NOT NULL,
-     disk_available   INT NOT NULL, 
+     disk_available   INT NOT NULL 
 );

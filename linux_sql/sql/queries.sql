@@ -4,9 +4,7 @@ FROM host_info
 GROUP BY cpu_number, id
 ORDER BY cpu_number, total_mem DESC;
 
-SELECT data_trunc('hour', timestamp) + date_part('minute', timestamp):: int / 5 * interval '5 min'
-FROM host_usage;
-
+-- Round 5 Function - Timestamp Return in 5 Minute Intervals.
 CREATE FUNCTION round5(ts timestamp) RETURNS timestamp AS
 $$
 BEGIN
@@ -14,9 +12,6 @@ BEGIN
 END;
 $$
    LANGUAGE PLPGSQL;
-
-SELECT host_id, timestamp, round5(timestamp)
-FROM host_usage;
 
 -- Average Memory Usage.
 SELECT host_id, hostname, ROUND((AVG(host_info.total_usage.memory_free * 1000)/host_info.total_mem)*100) AS avg_used_percentage,

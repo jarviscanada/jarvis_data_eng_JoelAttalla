@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #! /bin/sh
 
 cmd=$1
@@ -44,6 +43,4 @@ case $cmd in
 	echo 'Commands: start|stop|create'
 	exit 1
 	;;
-esac   
-=======
->>>>>>> release
+esac

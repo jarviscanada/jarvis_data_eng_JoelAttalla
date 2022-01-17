@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #! /bin/sh
 
 cmd=$1
@@ -44,3 +45,5 @@ case $cmd in
 	exit 1
 	;;
 esac   
+=======
+>>>>>>> release

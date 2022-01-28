@@ -19,7 +19,7 @@ solutions are drafted using both the dataset and data analysis tools.
 ### Diagram
 ![Python_Data_Analytics.drawio.png](assets/Python_Data_Analytics.drawio.png)
 ### Data Analytics and Wrangling
-- All data analytics were processed through the [Jupyter Notebook](./python_data_wrangling/data/retail_data_analytics_wrangling.ipynb).
+- All data analytics and wrangling processes were processed through the [Jupyter Notebook](./python_data_wrangling/data/retail_data_analytics_wrangling.ipynb).
 - To address the lack of financial growth that LGS is facing, our team at Jarvis consulting 
 suggests that the company looks into the spending habits of newer customers. Assessing their 
 gift trend can then fuel the company to promote specific products that are being consumed 

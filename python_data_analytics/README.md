@@ -16,10 +16,10 @@ Azure system and then provides Jarvis with a transaction dataset of this data, l
 PostgreSQL database. This is done because the Jarvis team does not have permission to access 
 the Azure environment but needs this data to solve the business questions at hand. These 
 solutions are drafted using both the dataset and data analysis tools.
-#### Diagram
+### Diagram
 ![Python_Data_Analytics.drawio.png](assets/Python_Data_Analytics.drawio.png)
 ### Data Analytics and Wrangling
-- [Jupyter Notebook](./retail_data_analytics.ipynb)
+- All data analytics were processed through the [Jupyter Notebook](./retail_data_analytics_wrangling.ipynb).
 - To address the lack of financial growth that LGS is facing, our team at Jarvis consulting 
 suggests that the company looks into the spending habits of newer customers. Assessing their 
 gift trend can then fuel the company to promote specific products that are being consumed 

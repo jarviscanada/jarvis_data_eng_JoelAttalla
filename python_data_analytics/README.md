@@ -13,7 +13,7 @@ their customer behaviour when shopping online.
 ### Project Architecture
 The IT team at LGS pulls all transactional data between 01/12/2009 and 09/12/2011 from their 
 Azure system and then provides Jarvis with a transaction dataset of this data, loaded onto a 
-PostgreSQL database. This is done because the Jarvis team does not have permission to access 
+PostgreSQL database. This is done because the Jarvis Consulting team does not have permission to access 
 the Azure environment but needs this data to solve the business questions at hand. These 
 solutions are drafted using both the dataset and data analysis tools.
 ### Diagram

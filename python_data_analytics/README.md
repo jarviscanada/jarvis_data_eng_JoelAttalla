@@ -7,7 +7,12 @@ its owner has expressed its lack of growth. The marketing team involved with LGS
 in solving this problem and ultimately promoting economic growth. Ideally, they believe this 
 would be done using newer, more innovative technologies and focusing on customer needs. The 
 Jarvis consulting team then worked on a proof of concept (PoC) project to help LGS analyze 
-their customer behaviour when shopping online.  
+their customer behaviour when shopping online. To do this, our team used a transaction dataset
+from 01/12/2009 to 09/12/2011, which was stored in a PostgresSQL database. The business needs will 
+be fulfilled through utilizing both the PostgresSQL database and Jupyter Notebook, which both have
+been provisioned through unique docker containers. To generate business solutions, we 
+implemented different programming techniques to process the data and generate
+analytical graphs, all run through the Jupyter Notebook.
 ## *Implementation*
 ****
 ### Project Architecture
@@ -30,6 +35,8 @@ in revenue at the end of every quarter. Pinpointing the root of that increase an
 newer marketing strategies to promote those heavily-consumed products will also allow for 
 an influx of profit. 
 ## *Improvements*
+- To perform a more detailed analysis of LGS's consumer audience, using greater, more recent
+sample sizes of data would be recommended.
 - We suggest that the LGS team also analyze any age-specific trends.
 - Regarding cancelled orders, we think that it is also essential to assess which items are 
 being cancelled and their respective data sets.

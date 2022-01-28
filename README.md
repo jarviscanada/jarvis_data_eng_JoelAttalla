@@ -17,7 +17,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_JoelAttall
 
 **Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master/linux_sql)]: Grasped core business needs, drafted an architecture diagram,  and proposed solutions for the company. Developed a monitoring system with integrated bash scripts and SQL queries to extract, store, and analyze data. The data is then processed across cluster nodes into a provisioned Postgres database.
 
-**Python Data Analytics [In Progress]** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master )]: Designed and implemented a proof of concept (PoC) system to analyze customer shopping behaviour. Customer data was imported into a PSQL data warehouse, and data wrangling/analysis was conducted using Python Dataframe/NumPy and Pandas through the Jupyter Notebook. Through the implementation of various algorithms and methodologies, statistical diagrams will be generated/visualized to provide data analytics which, in turn, will enhance a company's marketing strategies and decision making.
+**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_JoelAttalla/tree/master/python_data_analytics)]: Designed and implemented a proof of concept (PoC) system to analyze customer shopping behaviour. Customer data was imported into a PSQL data warehouse, and data wrangling/analysis was conducted using Python Dataframe/NumPy and Pandas through the Jupyter Notebook. Through the implementation of various algorithms and methodologies, statistical diagrams will be generated/visualized to provide data analytics which, in turn, will enhance a company's marketing strategies and decision making.
 
 
 ## Highlighted Projects

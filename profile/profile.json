@@ -25,8 +25,8 @@
     },
     {
       "description": "Designed and implemented a proof of concept (PoC) system to analyze customer shopping behaviour. Customer data was imported into a PSQL data warehouse, and data wrangling/analysis was conducted using Python Dataframe/NumPy and Pandas through the Jupyter Notebook. Through the implementation of various algorithms and methodologies, statistical diagrams will be generated/visualized to provide data analytics which, in turn, will enhance a company's marketing strategies and decision making.",
-      "git_url": " ",
-      "name": "Python Data Analytics [In Progress]"
+      "git_url": "/python_data_analytics",
+      "name": "Python Data Analytics"
     }
   ],
   "name": "Joel Attalla",

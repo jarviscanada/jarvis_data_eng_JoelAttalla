@@ -1,4 +1,4 @@
-#Python Data Analytics
+# Python Data Analytics
 ****
 ## *Introduction*
 The London Gift Shop (LGS) is an online store based in the UK specializing in gift-ware.
